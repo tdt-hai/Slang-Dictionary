@@ -6,12 +6,13 @@ public class Main {
 		// TODO Auto-generated method stub
           String choose = null;
           boolean exit = false;
+          SearchSlangWord searchSlangWord = new SearchSlangWord();
           showMenu();
           while(true) {
         	  choose = scanner.nextLine();
         	  switch(choose) {
         	  case "1":
-        		  System.out.println("Ban da chon cau 1");
+        		  searchSlangWord.show();
         		  break;
         	  case "2":
         		  System.out.println("Ban da chon cau 2");
