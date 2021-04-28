@@ -8,6 +8,10 @@ public class Main {
           boolean exit = false;
           SearchSlangWord searchSlangWord = new SearchSlangWord();
           SearchDefine searchdefine = new SearchDefine();
+          ShowHistory showhistory = new ShowHistory();
+          addSlangWord addslangword = new addSlangWord();
+          editSlangWord editslangword = new editSlangWord();
+          DeleteSlangWord deleteslangword = new DeleteSlangWord();
           showMenu();
           while(true) {
         	  choose = scanner.nextLine();
@@ -19,16 +23,16 @@ public class Main {
         		  searchdefine.show();
         		  break;
         	  case "3":
-        		  System.out.println("Ban da chon cau 3");
+        		  showhistory.show();
         		  break;
         	  case "4":
-        		  System.out.println("Ban da chon cau 4");
+        		  addslangword.add();
         		  break;
         	  case "5":
-        		  System.out.println("Ban da chon cau 5");
+        		  editslangword.edit();
         		  break;
         	  case "6":
-        		  System.out.println("Ban da chon cau 6");
+        		  deleteslangword.delete();
         		  break;
         	  case "7":
         		  System.out.println("Ban da chon cau 7");

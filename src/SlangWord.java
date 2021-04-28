@@ -175,15 +175,15 @@ public class SlangWord {
 		List<String> meaning = map.get(slag);
 		int index = meaning.indexOf(oldValue);
 		meaning.set(index, newValue);
-		this.saveFile(FILE_SLANGWORD);
+		this.saveFile(FILE_SLANG);
 		System.out.println("Size of map: " + sizeMap);
 	}
 
-	public void saveHistory(String slag, String meaning) throws Exception {
+	public void saveHistory(String slang, String meaning) throws Exception {
 		// String file = "history.txt";
 		File file1 = new File(FILE_HISTORY);
 		FileWriter fr = new FileWriter(file1, true);
-		fr.write(slag + "`" + meaning + "\n");
+		fr.write(slang + "`" + meaning + "\n");
 		fr.close();
 	}
 
@@ -221,25 +221,25 @@ public class SlangWord {
 
 	public void reset() {
 		try {
-			readFile(FILE_ORIGINAL_SLANGWORD);
-			this.saveFile(FILE_SLANGWORD);
+			readFile(FILE_SLANG_DEFAULT);
+			this.saveFile(FILE_SLANG);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public void delete(String slag, String value) {
+	public void delete(String slag) {
 		List<String> meaningList = map.get(slag);
-		int index = meaningList.indexOf(value);
-		if (meaningList.size() == 1) {
+		if (meaningList.size() >= 1) {
 			map.remove(slag);
+			System.out.println("Done");
 		} else {
-			meaningList.remove(index);
-			map.put(slag, meaningList);
+			//meaningList.remove(slag);
+			System.out.println("Not in slang definition");
 		}
 		sizeMap--;
-		this.saveFile(FILE_SLANGWORD);
+		this.saveFile(FILE_SLANG);
 	}
 
 	public void addNew(String slag, String meaning) {
@@ -247,7 +247,7 @@ public class SlangWord {
 		meaningList.add(meaning);
 		sizeMap++;
 		map.put(slag, meaningList);
-		this.saveFile(FILE_SLANGWORD);
+		this.saveFile(FILE_SLANG);
 	}
 
 	public void addDuplicate(String slag, String meaning) {
@@ -255,14 +255,14 @@ public class SlangWord {
 		meaningList.add(meaning);
 		sizeMap++;
 		map.put(slag, meaningList);
-		this.saveFile(FILE_SLANGWORD);
+		this.saveFile(FILE_SLANG);
 	}
 
 	public void addOverwrite(String slag, String meaning) {
 		List<String> meaningList = map.get(slag);
 		meaningList.set(0, meaning);
 		map.put(slag, meaningList);
-		this.saveFile(FILE_SLANGWORD);
+		this.saveFile(FILE_SLANG);
 	}
 
 	public boolean checkSlang(String slag) {

@@ -21,13 +21,14 @@ public class SearchSlangWord {
         			for (int i = 0; i < S.length; i++) {
         				System.out.print("Result: ");
         				System.out.println(S[i][2]);
+        				slangword.saveHistory(S[i][1], S[i][2]);
         			}
          		   System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		}
         		else {
         			System.out.println("Not found");
         		}
-            } catch (NumberFormatException ex) {
+            } catch (Exception ex) {
                 System.out.print("Exeption ! Please input retry ");
             }
         }
