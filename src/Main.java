@@ -7,6 +7,7 @@ public class Main {
           String choose = null;
           boolean exit = false;
           SearchSlangWord searchSlangWord = new SearchSlangWord();
+          SearchDefine searchdefine = new SearchDefine();
           showMenu();
           while(true) {
         	  choose = scanner.nextLine();
@@ -15,7 +16,7 @@ public class Main {
         		  searchSlangWord.show();
         		  break;
         	  case "2":
-        		  System.out.println("Ban da chon cau 2");
+        		  searchdefine.show();
         		  break;
         	  case "3":
         		  System.out.println("Ban da chon cau 3");

@@ -1,6 +1,15 @@
 import java.util.*;
+import java.util.Map.Entry;
 import java.io.*;
-
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
 public class SlangWord {
 	
 	private TreeMap<String, List<String>> map = new TreeMap<>();
@@ -8,14 +17,14 @@ public class SlangWord {
 	private int sizeMap;
 	private String FILE_SLANG = "slang.txt";
 	private String FILE_SLANG_DEFAULT = "slang-default.txt";
-	//private String FILE_HISTORY = "history.txt";
+	private String FILE_HISTORY = "history.txt";
 	public SlangWord() {
 		try {
 			String current = new java.io.File(".").getCanonicalPath();
 			//System.out.println("Current dir:" + current);
 			FILE_SLANG = current + "\\" + FILE_SLANG;
 			FILE_SLANG_DEFAULT = current + "\\" + FILE_SLANG_DEFAULT;
-			//FILE_HISTORY = current + "\\" + FILE_HISTORY;
+			FILE_HISTORY = current + "\\" + FILE_HISTORY;
 			readFile(FILE_SLANG);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

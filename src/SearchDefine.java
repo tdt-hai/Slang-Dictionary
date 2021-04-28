@@ -1,19 +1,16 @@
-import java.util.*;
+import java.util.Scanner;
 
-import slang.String;
-
-
-public class SearchSlangWord {
+public class SearchDefine {
 	public static Scanner scanner = new Scanner(System.in);
 	SlangWord slangword = new SlangWord();
+	SearchSlangWord searchslangword = new SearchSlangWord();
 	public String[][] S = null;
-	
 	public void show() {
 		String word;	
-		System.out.print("What word do want to find: ");
+		System.out.print("What word definition do want to find: ");
             try {
             	word = scanner.nextLine();
-            	S = slangword.getMeaning(word);
+            	S = slangword.findDefinition(word);
             	long startTime = System.currentTimeMillis();
         		long endTime = System.currentTimeMillis();
         		long timeElapsed = endTime - startTime;
@@ -31,5 +28,4 @@ public class SearchSlangWord {
                 System.out.print("Exeption ! Please input retry ");
             }
         }
-		
-	}
+}
