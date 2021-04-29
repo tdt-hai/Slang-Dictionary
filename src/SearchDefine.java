@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import slang.Exception;
-
 public class SearchDefine {
 	public static Scanner scanner = new Scanner(System.in);
 	SlangWord slangword = new SlangWord();

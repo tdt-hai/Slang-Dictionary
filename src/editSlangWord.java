@@ -10,7 +10,7 @@ public class editSlangWord {
 		System.out.print("What slang do want to edit: ");
 		 try {
          	word = scanner.nextLine();
-         	S = slangword.getMeaning(word);
+         	S = slangword.getWord(word);
          	if(S != null) {
     			for (int i = 0; i < S.length; i++) {
     				System.out.print("Result: " + S[i][2]);

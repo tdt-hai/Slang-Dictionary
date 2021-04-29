@@ -1,6 +1,5 @@
 import java.util.*;
 
-import slang.String;
 
 
 public class SearchSlangWord {
@@ -13,7 +12,7 @@ public class SearchSlangWord {
 		System.out.print("What word do want to find: ");
             try {
             	word = scanner.nextLine();
-            	S = slangword.getMeaning(word);;
+            	S = slangword.getWord(word);;
         		if(S != null) {
         			for (int i = 0; i < S.length; i++) {
         				System.out.print("Result: ");
