@@ -5,13 +5,14 @@ public class DeleteSlangWord {
 	SlangWord slangword = new SlangWord();
 	public void delete() {
 		String word;	
+		//String slang;
 		System.out.print("What slang do want delete: ");
-		word = scanner.nextLine();
 		try {
+			word = scanner.nextLine();
         	slangword.delete(word);
         	
         } catch (Exception ex) {
-            System.out.print("Exeption ! Please input retry ");
+            System.out.println("Not found");
         }
 	}
 }

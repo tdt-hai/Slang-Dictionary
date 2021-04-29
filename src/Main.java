@@ -6,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
           String choose = null;
           boolean exit = false;
+          SlangWord slangword  = new SlangWord();
           SearchSlangWord searchSlangWord = new SearchSlangWord();
           SearchDefine searchdefine = new SearchDefine();
           ShowHistory showhistory = new ShowHistory();
@@ -35,7 +36,7 @@ public class Main {
         		  deleteslangword.delete();
         		  break;
         	  case "7":
-        		  System.out.println("Ban da chon cau 7");
+        		  slangword.reset();
         		  break;
         	  case "8":
         		  System.out.println("Ban da chon cau 8");

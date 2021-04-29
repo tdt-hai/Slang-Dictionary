@@ -1,5 +1,8 @@
 import java.util.*;
 import java.util.Map.Entry;
+
+import slang.String;
+
 import java.io.*;
 import java.io.File;
 import java.io.FileWriter;
@@ -223,21 +226,21 @@ public class SlangWord {
 		try {
 			readFile(FILE_SLANG_DEFAULT);
 			this.saveFile(FILE_SLANG);
+			System.out.println("Reset successfull");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Reset fail: " + e);
 		}
 	}
 
-	public void delete(String slag) {
-		List<String> meaningList = map.get(slag);
-		if (meaningList.size() >= 1) {
-			map.remove(slag);
-			System.out.println("Done");
-		} else {
-			//meaningList.remove(slag);
-			System.out.println("Not in slang definition");
-		}
+	public void delete(String slang) {
+		List<String> listMeaning = map.get(slang);
+	    if (listMeaning == null) {
+	    	System.out.println("Not found slangword");	    	
+	    }
+	    else {
+	    	map.remove(slang);
+	    	System.out.println("Done");
+	    }
 		sizeMap--;
 		this.saveFile(FILE_SLANG);
 	}
