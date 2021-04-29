@@ -278,14 +278,13 @@ public class SlangWord {
 
 	public String[] random() {
 		// Random a number
-		int minimun = 0;
-		int maximun = map.size() - 1;
-		int rand = randInt(minimun, maximun);
+		int minimum = 0;
+		int maximum = map.size() - 1;
+		int rand = randInt(minimum, maximum);
 		// Get slang meaning
 		String s[] = new String[2];
 		int index = 0;
 		for (String key : map.keySet()) {
-			// System.out.println(key);
 			if (index == rand) {
 				s[0] = key;
 				s[1] = map.get(key).get(0);

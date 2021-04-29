@@ -13,39 +13,54 @@ public class Main {
           addSlangWord addslangword = new addSlangWord();
           editSlangWord editslangword = new editSlangWord();
           DeleteSlangWord deleteslangword = new DeleteSlangWord();
+          randomSlangWord randomslangword = new randomSlangWord();
+	      long startTime = System.currentTimeMillis();
+	      long endTime = System.currentTimeMillis();
+	  	  long timeElapsed = endTime - startTime;
+  	   
           showMenu();
           while(true) {
         	  choose = scanner.nextLine();
         	  switch(choose) {
         	  case "1":
         		  searchSlangWord.show();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "2":
         		  searchdefine.show();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "3":
         		  showhistory.show();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "4":
         		  addslangword.add();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "5":
         		  editslangword.edit();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "6":
         		  deleteslangword.delete();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "7":
         		  slangword.reset();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "8":
-        		  System.out.println("Ban da chon cau 8");
+        		  randomslangword.random();
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "9":
         		  System.out.println("Ban da chon cau 9");
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "10":
         		  System.out.println("Ban da chon cau 10");
+        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "11":
         		  System.out.println("Exit");
