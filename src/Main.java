@@ -14,6 +14,7 @@ public class Main {
           editSlangWord editslangword = new editSlangWord();
           DeleteSlangWord deleteslangword = new DeleteSlangWord();
           randomSlangWord randomslangword = new randomSlangWord();
+          quizRandomSlangWord quizrandom = new quizRandomSlangWord();
 	      long startTime = System.currentTimeMillis();
 	      long endTime = System.currentTimeMillis();
 	  	  long timeElapsed = endTime - startTime;
@@ -55,8 +56,7 @@ public class Main {
         		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
         		  break;
         	  case "9":
-        		  System.out.println("Ban da chon cau 9");
-        		  System.out.printf("Time in milisecond %s ms \n",String.valueOf(timeElapsed));
+        		  quizrandom.quiz();
         		  break;
         	  case "10":
         		  System.out.println("Ban da chon cau 10");

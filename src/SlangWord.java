@@ -298,28 +298,29 @@ public class SlangWord {
 	public static int randInt(int minimum, int maximum) {
 		return (minimum + (int) (Math.random() * maximum));
 	}
-
-	public String[] quiz(int type) {
-		String s[] = new String[6];
-		if (type == 1) {
-			// Random a number
-			String[] slangRandom = this.random();
-			s[0] = slangRandom[0];
-			int rand = randInt(1, 4);
-			s[rand] = slangRandom[1];
-			s[5] = slangRandom[1];
-			for (int i = 1; i <= 4; i++) {
-				if (rand == i)
-					continue;
-				else {
-					String[] slangRand = this.random();
-					while (slangRand[0] == s[0]) {
-						slangRand = this.random();
-					}
-					s[i] = slangRand[1];
-				}
-			}
-		} else {
+    public String[] quizRandomSlangWord() {
+    	String s[] = new String[6]; 
+    	// Random a number
+    	String[] slangRandom = this.random();
+    	s[0] = slangRandom[0];
+    	int rand = randInt(1, 4);
+    	s[rand] = slangRandom[1];
+    	s[5] = slangRandom[1];
+    		for (int i = 1; i <= 4; i++) {
+    		    if (rand == i)
+    				continue;
+    			else {
+    			    String[] slangRand = this.random();
+    				while (slangRand[0] == s[0]) {
+    				      slangRand = this.random();
+    			     }
+    			   s[i] = slangRand[1];
+    	        }
+           }
+    		return s;
+     }
+	public String[] quizDefineSlangWord() {
+		String s[] = new String[6]; 
 			// Random a number
 			String[] slangRandom = this.random();
 			s[0] = slangRandom[1];
@@ -337,8 +338,7 @@ public class SlangWord {
 					s[i] = slangRand[0];
 				}
 			}
-		}
-
-		return s;
+			return s; 
 	}
+
 }
