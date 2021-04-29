@@ -173,13 +173,17 @@ public class SlangWord {
 		}
 		return s;
 	}
-	public void set(String slag, String oldValue, String newValue) {
-		System.out.println(oldValue + "\t" + newValue);
-		List<String> meaning = map.get(slag);
+	public void update(String slang, String oldValue, String newValue) {
+		List<String> meaning = map.get(slang);
 		int index = meaning.indexOf(oldValue);
 		meaning.set(index, newValue);
 		this.saveFile(FILE_SLANG);
-		System.out.println("Size of map: " + sizeMap);
+//		System.out.println(oldValue + "\t" + newValue);
+//		List<String> meaning = map.get(slag);
+//		int index = meaning.indexOf(oldValue);
+//		meaning.set(index, newValue);
+//		this.saveFile(FILE_SLANG);
+//		System.out.println("Size of map: " + sizeMap);
 	}
 
 	public void saveHistory(String slang, String meaning) throws Exception {
