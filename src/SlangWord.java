@@ -91,7 +91,7 @@ public class SlangWord {
 			}
 			if (part[0].contains("|")) {
 				String[] d = (part[0]).split("\\|");
-				for (int ii = 0; ii < d.length; ii++)
+				for (int j = 0; j < d.length; j++)
 				Collections.addAll(word, d);
 				sizeMap += d.length - 1;
 			} else {
